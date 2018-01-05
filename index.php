@@ -8,4 +8,8 @@ $app->get('/', function(){
     echo 'Home';
 });
 
+$app->get('/users', function(){
+    echo 'users';
+});
+
 $app->run();
