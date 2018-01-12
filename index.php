@@ -10,6 +10,10 @@ $app = new \Slim\App([
 
 $container = $app->getContainer();
 
+$container['db'] = function () {
+    return new PDO('mysql:host=localhost;dbname=slim','andrii','1');
+};
+
 /*$container['greeting'] = function () {
     echo 'abc';
     return 'Hello from the container!';
@@ -40,7 +44,11 @@ $container['view'] = function ($container) {
 
 
 $app->get('/', function ($request, $response) {
-    return $this->view->render($response, 'home.twig');
+
+    $users = $this->db->query("SELECT * FROM users")->fetchAll(PDO::FETCH_OBJ);
+    var_dump($users);
+
+    //return $this->view->render($response, 'home.twig');
 })->setName('home');
 
 $app->get('/users/{id}', function ($request, $response, $args) {
@@ -55,7 +63,7 @@ $app->get('/users/{id}', function ($request, $response, $args) {
        'id' => $args['id'],
         'username' => 'alex'
     ];
-    
+
     var_dump(compact('user'));
 
     return $this->view->render($response, 'users.twig',[
@@ -78,6 +86,20 @@ $app->post('/contact', function ($request, $response) {
     return $response->withRedirect('/contact/confirm');
 
 })->setName('contact');
+
+$app->group('/topics', function () {
+    $this->get('', function () {
+        echo 'Topic list';
+    });
+
+    $this->get('/{id}', function ($request, $response, $args ) {
+        echo 'Topic ' . $args['id'];
+    });
+
+    $this->post('', function () {
+        echo 'Post topic';
+    });
+});
 
 
 
