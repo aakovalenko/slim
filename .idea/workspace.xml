@@ -19,11 +19,22 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+            <state relative-caret-position="1094">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
-                <marker date="1515754165307" expanded="true" signature="1138:1157" ph="SELECT * FRO... users" />
+                <marker date="1515762792869" expanded="true" signature="1140:1159" ph="SELECT * FRO... users" />
+                <marker date="1515762792869" expanded="true" signature="1399:1445" ph="SELECT * FRO... users" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/profile.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,6 +103,7 @@
         <option value="$PROJECT_DIR$/resources/views/contact_confirm.twig" />
         <option value="$PROJECT_DIR$/resources/views/contact.twig" />
         <option value="$PROJECT_DIR$/resources/views/users.twig" />
+        <option value="$PROJECT_DIR$/resources/views/profile.twig" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -157,13 +169,6 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="slim" type="b2602c69:ProjectViewProjectNode" />
-              <item name="slim" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -202,12 +207,12 @@
       <updated>1515149960093</updated>
       <workItem from="1515149961506" duration="587000" />
       <workItem from="1515161935993" duration="4573000" />
-      <workItem from="1515743506206" duration="10527000" />
+      <workItem from="1515743506206" duration="12562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15687000" />
+    <option name="totallyTimeSpent" value="17722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -241,7 +246,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -250,7 +257,8 @@
         <state relative-caret-position="324">
           <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <marker date="1515754165307" expanded="true" signature="1138:1157" ph="SELECT * FRO... users" />
+            <marker date="1515762792869" expanded="true" signature="1140:1159" ph="SELECT * FRO... users" />
+            <marker date="1515762792869" expanded="true" signature="1399:1445" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -292,7 +300,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515754165307" expanded="true" signature="1138:1157" ph="SELECT * FRO... users" />
+            <marker date="1515762792869" expanded="true" signature="1140:1159" ph="SELECT * FRO... users" />
+            <marker date="1515762792869" expanded="true" signature="1399:1445" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -353,12 +362,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/profile.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+        <state relative-caret-position="1094">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
-            <marker date="1515754165307" expanded="true" signature="1138:1157" ph="SELECT * FRO... users" />
+            <marker date="1515762792869" expanded="true" signature="1140:1159" ph="SELECT * FRO... users" />
+            <marker date="1515762792869" expanded="true" signature="1399:1445" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>

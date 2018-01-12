@@ -45,31 +45,32 @@ $container['view'] = function ($container) {
 
 $app->get('/', function ($request, $response) {
 
-    $users = $this->db->query("SELECT * FROM users")->fetchAll(PDO::FETCH_OBJ);
-    var_dump($users);
+    //$users = $this->db->query("SELECT * FROM users")->fetchAll(PDO::FETCH_OBJ);
+    //var_dump($users);
 
-    //return $this->view->render($response, 'home.twig');
+    return $this->view->render($response, 'home.twig');
 })->setName('home');
 
-$app->get('/users/{id}', function ($request, $response, $args) {
 
-   /* $user = [
-      'username' => 'Billy',
-      'name' => 'B.Garett',
-      'email' => 'bgarrett@codecourse.com'
-    ];*/
 
-    $user = [
-       'id' => $args['id'],
-        'username' => 'alex'
-    ];
 
-    var_dump(compact('user'));
+$app->get('/users/{username}', function ($request, $response, $args) {
 
-    return $this->view->render($response, 'users.twig',[
-        'users' => $user,
+    $user = $this->db->prepare("SELECT * FROM users WHERE username = :username");
+
+    $user->execute([
+       'username' => $args['username']
     ]);
-})->setName('users.index');
+
+    $user = $user->fetch(PDO::FETCH_OBJ);
+
+
+
+
+    return $this->view->render($response, 'users/profile.twig', [
+        'user' => $user
+    ]);
+});
 
 
 
@@ -86,6 +87,8 @@ $app->post('/contact', function ($request, $response) {
     return $response->withRedirect('/contact/confirm');
 
 })->setName('contact');
+
+
 
 $app->group('/topics', function () {
     $this->get('', function () {
