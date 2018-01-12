@@ -62,4 +62,13 @@ $app->get('/users', function ($request, $response) {
     ]);
 })->setName('users.index');
 
+$app->get('/contact', function ($request, $response) {
+    return $this->view->render($response, 'contact.twig');
+});
+
+$app->post('/contact', function ($request, $response) {
+
+    die('Contact!!!');
+})->setName('contact');
+
 $app->run();
