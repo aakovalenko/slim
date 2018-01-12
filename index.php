@@ -43,7 +43,7 @@ $app->get('/', function ($request, $response) {
     return $this->view->render($response, 'home.twig');
 })->setName('home');
 
-$app->get('/users', function ($request, $response) {
+$app->get('/users/{id}', function ($request, $response, $args) {
 
    /* $user = [
       'username' => 'Billy',
@@ -51,16 +51,19 @@ $app->get('/users', function ($request, $response) {
       'email' => 'bgarrett@codecourse.com'
     ];*/
 
-    $users = [
-        ['username' => 'alex'],
-        ['username' => 'billy'],
-        ['username' => 'dale'],
+    $user = [
+       'id' => $args['id'],
+        'username' => 'alex'
     ];
+    
+    var_dump(compact('user'));
 
     return $this->view->render($response, 'users.twig',[
-        'users' => $users,
+        'users' => $user,
     ]);
 })->setName('users.index');
+
+
 
 $app->get('/contact', function ($request, $response) {
     return $this->view->render($response, 'contact.twig');
@@ -73,8 +76,10 @@ $app->get('/contact/confirm', function ($request, $response) {
 $app->post('/contact', function ($request, $response) {
 
     return $response->withRedirect('/contact/confirm');
-    
+
 })->setName('contact');
+
+
 
 
 /*$app->post('/contact', function ($request, $response) {

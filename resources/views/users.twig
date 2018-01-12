@@ -4,10 +4,11 @@
 
 {% block content %}
 
-  <ul>
+  {#<ul>
       {% for user in users %}
           <li>{{ user.username }}</li>
           {% endfor %}
-  </ul>
+  </ul>#}
+    <h1>{{ users.username }} (#{{ users.id }})</h1>
 
 {% endblock %}
