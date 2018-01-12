@@ -38,12 +38,28 @@ $container['view'] = function ($container) {
     return $view;
 };
 
+
 $app->get('/', function ($request, $response) {
     return $this->view->render($response, 'home.twig');
 });
 
 $app->get('/users', function ($request, $response) {
-    return $this->view->render($response, 'users.twig');
+
+   /* $user = [
+      'username' => 'Billy',
+      'name' => 'B.Garett',
+      'email' => 'bgarrett@codecourse.com'
+    ];*/
+
+    $users = [
+        ['username' => 'alex'],
+        ['username' => 'billy'],
+        ['username' => 'dale'],
+    ];
+
+    return $this->view->render($response, 'users.twig',[
+        'users' => $users,
+    ]);
 });
 
 $app->run();
