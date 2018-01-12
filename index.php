@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 
 $app = new \Slim\App([
     'settings' => [
-        'displayErrorDetails' => false,
+        'displayErrorDetails' => true,
     ]
 ]);
 
