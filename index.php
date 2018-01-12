@@ -66,9 +66,22 @@ $app->get('/contact', function ($request, $response) {
     return $this->view->render($response, 'contact.twig');
 });
 
+$app->get('/contact/confirm', function ($request, $response) {
+    return $this->view->render($response, 'contact_confirm.twig');
+});
+
 $app->post('/contact', function ($request, $response) {
 
-    die('Contact!!!');
+    return $response->withRedirect('/contact/confirm');
+    
 })->setName('contact');
+
+
+/*$app->post('/contact', function ($request, $response) {
+
+  $params =  $request->getParam('email');
+  var_dump($params);
+  
+})->setName('contact');*/
 
 $app->run();
